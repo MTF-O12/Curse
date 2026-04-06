@@ -1,0 +1,212 @@
+/* ── СЕКЦИЯ ВАКАНСИЙ ── */
+.vac-section {
+  padding: 5rem 0;
+  border-bottom: 1px solid var(--border);
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.vac-section.visible { opacity: 1; transform: translateY(0); }
+
+/* ── ФОРМА ── */
+.vac-form {
+  background: var(--surface2);
+  border: 1px solid var(--border-bright);
+  padding: 2.5rem;
+  margin-bottom: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.vac-form::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), transparent);
+}
+
+.vac-form-title {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 2rem;
+}
+
+.vac-field {
+  margin-bottom: 1.5rem;
+}
+
+.vac-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0.6rem;
+}
+
+.vac-input,
+.vac-textarea {
+  width: 100%;
+  background: var(--surface3);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  padding: 0.85rem 1rem;
+  outline: none;
+  resize: vertical;
+  transition: border-color 0.2s;
+}
+
+.vac-input::placeholder,
+.vac-textarea::placeholder {
+  color: var(--text-muted);
+}
+
+.vac-input:focus,
+.vac-textarea:focus {
+  border-color: var(--border-bright);
+}
+
+/* ── СТАТУС ── */
+.vac-status {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  padding: 0.7rem 1rem;
+  margin-bottom: 1.25rem;
+  letter-spacing: 0.05em;
+}
+
+.vac-status--ok {
+  color: #6ee7b7;
+  border: 1px solid rgba(110,231,183,0.25);
+  background: rgba(110,231,183,0.05);
+}
+
+.vac-status--err {
+  color: #fca5a5;
+  border: 1px solid rgba(252,165,165,0.25);
+  background: rgba(252,165,165,0.05);
+}
+
+/* ── КНОПКА ── */
+.vac-btn {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: var(--accent-glow);
+  border: 1px solid var(--border-bright);
+  padding: 0.75rem 2rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.vac-btn:hover:not(:disabled) {
+  background: rgba(124,106,247,0.22);
+  border-color: var(--accent);
+}
+
+.vac-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ── ЗАГОЛОВОК СПИСКА ── */
+.vac-list-title {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.vac-count {
+  background: var(--accent-glow);
+  border: 1px solid var(--border-bright);
+  color: var(--accent);
+  font-size: 10px;
+  padding: 2px 8px;
+}
+
+/* ── ПУСТОЙ СПИСОК ── */
+.vac-empty {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--text-muted);
+  padding: 2rem 0;
+}
+
+/* ── СПИСОК ── */
+.vac-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* ── КАРТОЧКА ── */
+.vac-card {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  padding: 1.5rem 2rem;
+  transition: border-color 0.3s;
+}
+
+.vac-card:hover { border-color: var(--border-bright); }
+
+.vac-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.75rem;
+}
+
+.vac-company {
+  font-size: 1.1rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--text-primary);
+}
+
+.vac-date {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.vac-message {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+}
+
+.vac-delete {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  background: transparent;
+  border: 1px solid var(--border);
+  padding: 4px 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.vac-delete:hover {
+  color: #fca5a5;
+  border-color: rgba(252,165,165,0.4);
+  background: rgba(252,165,165,0.05);
+}
