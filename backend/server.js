@@ -7,7 +7,12 @@ const cors = require('cors');
 require('dotenv').config();
  
 const app = express();
-app.use(cors({ origin: 'http://localhost:5173' }));
+app.use(cors({
+  origin: 'http://localhost:5173',
+  methods: ['GET', 'POST', 'DELETE'],
+  credentials: true
+}));
+
 app.use(express.json());
  
 // ── ПОДКЛЮЧЕНИЕ К MONGODB ──
